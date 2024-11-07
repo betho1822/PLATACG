@@ -301,7 +301,7 @@ foreach ($nombres as $nombre) {
       position: absolute;
       right: -25px;
       top: 50%;
-      transform: translateY(-50%);
+      /* transform: translateY(-50%); */
       background-color: #007bff;
       color: #fff;
       border-radius: 50%;
@@ -311,10 +311,6 @@ foreach ($nombres as $nombre) {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: right 0.3s ease;
-    }
-    .btn-attend:hover {
-      right: -20px;
     }
   </style>
   <!-- Fuente adicional para "Pacifico" -->
@@ -759,7 +755,7 @@ foreach ($nombres as $nombre) {
       attendButton.addEventListener('click', function() {
         // Animación para ocultar el formulario existente
         var modalContent = document.querySelector('#taskModal .modal-content');
-        modalContent.classList.add('animate__animated', 'animate__fadeOutLeft');
+        modalContent.classList.add('animate__animated', 'animate__fadeOutLeft', 'animate__faster');
         
         modalContent.addEventListener('animationend', function() {
           // Limpiar el contenido del modal y mostrar el nuevo formulario
@@ -790,9 +786,9 @@ foreach ($nombres as $nombre) {
             </form>
           `;
 
-          // Remover clases de animación
+          // Remover clases de animación y agregar 'animate__faster'
           modalContent.classList.remove('animate__animated', 'animate__fadeOutLeft');
-          modalContent.classList.add('animate__animated', 'animate__fadeInRight');
+          modalContent.classList.add('animate__animated', 'animate__fadeInRight', 'animate__faster');
         }, {once: true});
       });
     }
