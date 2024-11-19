@@ -48,7 +48,7 @@ foreach ($nombres as $nombre) {
 
         // Tareas Sin Atender
         $stmt = $pdo->prepare("SELECT * FROM tareas WHERE asignado_a = :nombre AND (estado IS NULL OR estado = '') ORDER BY id ASC");
-        $stmt->execute([':nombre' => $nombre]);
+        $stmt->execute([':nombre' => $nombre]); 
         $tareasSinAtender[$nombre] = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } elseif ($user_type != 'administrador') {
         // Para usuarios individuales
@@ -115,8 +115,8 @@ foreach ($nombres as $nombre) {
       border: none;
     }
     .nav-tabs .nav-link.active {
-      color: #f20d84;
-      border-bottom: 3px solid #f20d84;
+      color: #ff2d8f;
+      border-bottom: 3px solid #ff2d8f;
       background-color: transparent;
     }
     .section-header {
@@ -263,10 +263,10 @@ foreach ($nombres as $nombre) {
 
     /* Actualizar estilos para el footer */
     footer {
-      color: #007bff;
+      /* color: #007bff; */
       font-size: 1.5em; /* Reducir tamaño de fuente */
       font-family: 'Pacifico', cursive; /* Fuente elegante */
-      animation: bounceIn 2s infinite;
+      animation: bounceIn 2s;
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -285,14 +285,14 @@ foreach ($nombres as $nombre) {
 
     /* Nuevo estilo para el botón 'Cerrar Sesión' */
     .btn-cerrar-sesion {
-      background-color: #dc3545; /* Rojo */
+      background-color: #ff2d8f; /* Rojo */
       border: none;
       color: #fff;
       font-weight: bold;
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .btn-cerrar-sesion:hover {
-      background-color: #c82333; /* Rojo oscuro */
+      /* background-color: #e60073; Rojo oscuro que entona con #ff2d8f */
       transform: scale(1.05);
     }
 

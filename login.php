@@ -81,16 +81,16 @@
     
     /* Actualizar estilos para el footer */
     footer {
-      color: #007bff;
+      /* color: #007bff; */
       font-size: 1.5em; /* Reducir tamaño de fuente */
       font-family: 'Pacifico', cursive; /* Fuente elegante */
-      animation: bounceIn 2s infinite;
+      animation: bounceIn 2s;
       /* Cambiar la posición del footer a fija */
       position: fixed;
       bottom: 0;
       width: 100%;
       /* Añadir un fondo para evitar que el contenido se sobreponga */
-      background-color: #ffffff;
+      /* background-color: #ffffff; */
       text-align: center;
       padding: 10px 0;
     }
